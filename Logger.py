@@ -141,13 +141,14 @@ class CustomLogger:
 
 
 if __name__ == "__main__":
-    App = CustomLogger()
+    #App = CustomLogger()
 
     # Example usage:
-    logger = CustomLogger("logs", "example.log", "Debug")
-    App.log( "Debug", "This is a debug message")
-    App.log( "Info", "This is an info message")
-    App.log( "Warning", "This is a warning message")
-    App.log( "Error", "This is an error message")
-    App.log( "Critical" "This is a critical message")
+    logger = CustomLogger( __file__, "Debug" )
+    logger.Log( f"This is a message without a set type" )
+    logger.Log( f"This is a debug message", "Debug" )
+    logger.Log( f"This is an info message", "Info" )
+    logger.Log( f"This is a warning message", "Warning" )
+    logger.Log( f"This is an error message", "Error" )
+    logger.Log( f"This is a critical message", "Critical" )
     
